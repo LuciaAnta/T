@@ -1,5 +1,6 @@
 Nombres de los integrantes del grupo (emails): 
-    --Lucia Magali Anta (magali_anta@hotmail.com / magaant18@gmail.com)
+    --Lucia Magali Anta (magali_anta@hotmail.com / magaant18@gmail.com).
+    
     -- Bautista Menna 
     
 Temática del TPE:

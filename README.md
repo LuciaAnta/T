@@ -15,7 +15,7 @@ Diagrama de entidad relación (DER):
 
 El código SQL que genera la base de datos (exportado desde phpMyAdmin):
 
-$ mysqldump -h ip_servidor -u usuario_bd -p --no-data=TRUE base_de_datos > tpe_olimpiadas.sql
+$ mysqldump -u  root@localhost -p tpe > tpe_olimpiadas.sql
 
  [Uploading tpe-- phpMyAdmin SQL Dump
 -- version 5.2.1

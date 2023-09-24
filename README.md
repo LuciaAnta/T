@@ -1,13 +1,15 @@
 Nombres de los integrantes del grupo (emails): 
 
     --Lucia Magali Anta (magali_anta@hotmail.com / magaant18@gmail.com). 
-    -- Bautista Menna (
+    -- Bautista Menna Zujani (bautimenna6@gmail.com).
     
 Temática del TPE:
-  El trabajo se basara en las Olimpiadas.
+  El trabajo se basará en las Olimpiadas.
   
 Breve descripción de la temática:
-  En esta pagina mostraremos informacion y actividades sobre las Olimpiadas. Se hara una pagina en la cual implantaremos los sucesos ocurridos y que actividades competitivas, hay actualmente.
+  En esta pagina mostraremos informacion y actividades sobre las Olimpiadas. Se hará
+  
+  una pagina en la cual implantaremos los sucesos ocurridos y qué actividades competitivas hay actualmente.
   
 Diagrama de entidad relación (DER):
 

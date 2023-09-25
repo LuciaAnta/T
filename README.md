@@ -15,3 +15,4 @@ Diagrama de entidad relación (DER):
 
 [Diagrama DER.olimpiadas.drawio.pdf](https://github.com/LuciaAnta/TPE-wed2/files/12707621/Diagrama.DER.olimpiadas.drawio.pdf)
 
+El codigo SQL se encuentra en tpe_olimpiadas.sql , dentro del repositorio. 

@@ -38,7 +38,7 @@ if (!isset($_SESSION['usuarios_usuario'])) {
                 <?php if (!isset($_SESSION['usuarios_usuario'])) :
                 ?>
                     <td class=" actions">
-                        <?php if (!$inscripto->finalizada) { ?><a href="finalizar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-warning ml-auto'>Finalizar</a> <?php } ?>
+                        <?php if (!$inscripto->finalizada) { ?><a href="finalizar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-warning ml-auto'>Editada</a> <?php } ?>
                         <a href="eliminar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-danger ml-auto'>Borrar</a>
                     </td>
                 <?php endif;

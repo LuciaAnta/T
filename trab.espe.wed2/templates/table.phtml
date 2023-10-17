@@ -1,0 +1,54 @@
+<?php require_once "templates/header.phtml"; ?>
+
+<h1>Inscriptos</h1>
+
+<!-- Acceso restringido para la inserción de inscriptos -->
+<?php
+if (!isset($_SESSION['usuarios_usuario'])) {
+    require 'templates/form_inscripcion.phtml';
+}
+?>
+
+<!-- Acceso público -->
+<table class="table ">
+    <thead>
+        <t>
+            <th>Equipo</th>
+            <th>Facultad</th>
+            <th>Deporte</th>
+
+            <?php if (!isset($_SESSION['usuarios_usuario'])) :
+            ?>
+                <th></th>
+            <?php endif;
+            ?>
+            </tr>
+    </thead>
+
+    <tbody>
+        <?php foreach ($equipos as $inscripto) : ?>
+            <tr class="item-inscripto <?php if ($inscripto->finalizada) : ?> finalizar <?php endif ?>">
+
+                <td><?= $inscripto->nombre_del_equipo ?></td>
+                <td><?= $inscripto->id_facultad ?></td>
+                <td><?= $inscripto->deportes ?></td>
+
+
+                <!-- Acceso restringido para la modificación/eliminación de bandas -->
+                <?php if (!isset($_SESSION['usuarios_usuario'])) :
+                ?>
+                    <td class=" actions">
+                        <?php if (!$inscripto->finalizada) { ?><a href="finalizar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-warning ml-auto'>Finalizar</a> <?php } ?>
+                        <a href="eliminar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-danger ml-auto'>Borrar</a>
+                    </td>
+                <?php endif;
+                ?>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<p class="mt-3"><small>Mostrando <?= $count ?> Equipos</small></p>
+
+
+<?php require 'templates/footer.phtml' ?>

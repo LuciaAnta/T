@@ -1,0 +1,54 @@
+<!-- formulario de alta de Inscripciones -->
+
+<!--definir la accion -->
+<form action="agregar" method="POST" class="my-4">
+    <div class="row">
+        <div class="col-9">
+            <div class="form-group">
+                <label>Nombre del Equipo</label>
+                <input required name="equipo" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="form-group">
+                <label>Facultad</label>
+                <select required name="facultad" class="form-control">
+                    <option value="1">Ciencias Exactas</option>
+                    <option value="2">de Arte</option>
+                    <option value="3">Ciencias Economicas</option>
+                    <option value="4">Ciencias Veterinarias</option>
+                    <option value="5">Ciencias Humanas</option>
+                    <option value="6">de Derecho</option>
+                    <option value="7">Ciencias de la Salud</option>
+                    <option value="8">Ciencias Sociales</option>
+                    <option value="9">de Ingenieria</option>
+                    <option value="10">de Agronomia</option>
+                </select>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Deporte</label>
+        <select required name="deporte" class="form-control">
+            <option value="Ajedrez">Ajedrez</option>
+            <option value="Padel">Padel</option>
+            <option value="Basquet">Basquet</option>
+            <option value="Rugby">Rugby</option>
+            <option value="Tenis de mesa">Tenis de mesa</option>
+            <option value="Voley">Voley</option>
+            <option value="Handball">Handball</option>
+            <option value="Futbol 7">Futbol 7</option>
+            <option value="Futbol 11">Futbol 11</option>
+            <option value="Atletismo Cross">Atletismo cross</option>
+            <option value="Futsal">Futsal</option>
+            <option value="Hockey 7">Hockey 7</option>
+            <option value="Tenis">Tenis</option>
+        </select>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Inscribirse</button>
+</form>

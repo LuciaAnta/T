@@ -17,8 +17,8 @@ class inscripcontroller
 
     public function verInscripto()
     {
-
-
+        AuthHelper::init();
+        
         // obtengo Equipos del controlador
         $equipos = $this->model->mostrar();
 
@@ -54,12 +54,14 @@ class inscripcontroller
 
     function removerInscripto($id)
     {
+        AuthHelper::verify();
         $this->model->eliminarInscripto($id);
         header('Location: ' . BASE_URL);
     }
 
     function editarInscripto($id)
     {
+        AuthHelper::verify();
         $this->model->updateInscripto($id);
         header('Location: ' . BASE_URL);
     }

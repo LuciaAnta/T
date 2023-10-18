@@ -4,7 +4,7 @@
 
 <!-- Acceso restringido para la inserción de inscriptos -->
 <?php
-if (!isset($_SESSION['usuarios_usuario'])) {
+if (isset($_SESSION['usuarios_usuario'])) {
     require 'templates/form_inscripcion.phtml';
 }
 ?>
@@ -17,7 +17,7 @@ if (!isset($_SESSION['usuarios_usuario'])) {
             <th>Facultad</th>
             <th>Deporte</th>
 
-            <?php if (!isset($_SESSION['usuarios_usuario'])) :
+            <?php if (isset($_SESSION['usuarios_usuario'])) :
             ?>
                 <th></th>
             <?php endif;
@@ -35,11 +35,11 @@ if (!isset($_SESSION['usuarios_usuario'])) {
 
 
                 <!-- Acceso restringido para la modificación/eliminación de bandas -->
-                <?php if (!isset($_SESSION['usuarios_usuario'])) :
+                <?php if (isset($_SESSION['usuarios_usuario'])) :
                 ?>
                     <td class=" actions">
-                        <?php if (!$inscripto->finalizada) { ?><a href="finalizar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-warning ml-auto'>Editada</a> <?php } ?>
-                        <a href="eliminar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-danger ml-auto'>Borrar</a>
+                        <?php if (!$inscripto->finalizada) { ?><a href="finalizar/<?php echo $inscripto->id_equipos ?>" type="button" class='btn btn-warning ml-auto'>Confirmar</a> 
+                        <a href="eliminar/<?php echo $inscripto->id_equipos ?>" class='btn btn-danger ml-auto' >Borrar</a><?php } ?>
                     </td>
                 <?php endif;
                 ?>
